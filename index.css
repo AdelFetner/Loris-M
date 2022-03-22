@@ -1,0 +1,840 @@
+/* Fonts */
+
+/* Familia font Futura Std */
+
+@font-face {
+    font-family: "Futura Std Medium";
+    src: url("assets/fonts/FuturaStdMedium/Futura StdMedium.otf");
+}
+
+/* Familia font Mont */
+
+/* Incluida en la carpeta de la familia está el especimen muestra para guía futura de uso de fonts.
+
+Están el resto de fonts también en la carpeta en caso de futuro uso.*/
+
+@font-face {
+    font-family: "Mont Thin";
+    src: url("assets/fonts/Mont/Mont-Thin.otf");
+}
+
+@font-face {
+    font-family: "Mont Light";
+    src: url("assets/fonts/Mont/Mont-Light.otf");
+}
+
+@font-face {
+    font-family: "Mont Regular";
+    src: url("assets/fonts/Mont/Mont-Regular.otf");
+}
+
+@font-face {
+    font-family: "Mont SemiBold";
+    src: url("assets/fonts/Mont/Mont-SemiBold.otf");
+}
+
+@font-face {
+    font-family: "Mont Bold";
+    src: url("assets/fonts/Mont/Mont-Bold.otf");
+}
+
+@font-face {
+    font-family: "Mont Heavy";
+    src: url("assets/fonts/Mont/Mont-Heavy.otf");
+}
+
+
+/* Estilizado general */
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Mont Heavy";
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    /* 1 rem = 10px */
+    font-size: 62.5%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:visited{
+    color: #000;
+}
+
+img{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Estilizado específico */
+
+
+/* Estilizado del header-nav */
+
+#container-header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    transition: top .5s ease-in-out .15s;
+    z-index: 3;
+}
+
+#header-img{
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+}
+
+#container-nav{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5%;
+}
+
+.nav-anchor{
+    font-size: 1.5rem;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Estilizado del main */
+
+#container-main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F9DEC9;
+}
+
+#container-main-text{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text{
+    padding-top: 2.5rem;
+}
+.main-text::selection{
+    background-color: #BB004B;
+    color: #ffffff;
+}
+
+.heading{
+    font-size: 5rem;
+    line-height: 5.5rem;
+    letter-spacing: -.25rem;
+}
+
+.paragraph{
+    font-family: "Futura Std Medium";
+    font-size: 2.25rem;
+}
+
+#main-img{
+    height: 65%;
+    width: auto;
+    padding-left: 5%;
+}
+
+#main-img,#container-main-text{
+    margin: auto;
+}
+
+
+
+/* Estilizado de artículos y div-transition - transitions*/
+
+.article{
+    height: 100vh;
+    width: 100%;
+}
+
+.container-transition{
+    height: auto;
+    width: 100%;
+    background-color: #FCF0D9;
+}
+.container-transition:nth-child(even){
+    background-color: #F9DEC9;
+}
+
+
+/* Primera transition, de main a primer artículo */
+#transition-main{
+    height: auto;
+    width: 100%;
+    background-color: #F9DEC9;
+}
+
+/* Segunda transition, de segundo a tercer artículo */
+#transition-article{
+    height: auto;
+    width: 100%;
+}
+
+/* tercera transition, en mobile, de tercer artículo a footer */
+
+#wave-mobile{
+    display: none;
+}
+
+/* Estilizado del primer artículo */
+
+#container-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FCF0D9;
+}
+
+#container-first-art-text{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6%;
+}
+
+.article-text::selection{
+    background-color: #c0547f;
+    color: #ffffff;
+}
+
+#first-art-heading{
+    width: 85%;
+}
+
+#first-art-span{
+    margin: 2% 0 6.5% 0;
+    font-family: "Mont SemiBold";
+    font-size: 1.75rem;
+}
+
+#first-art-img{
+    height: 65%;
+    width: 50%;
+}
+
+#first-art-img-mobile{
+    display: none;
+}
+
+/* Estilizado del segundo artículo */
+
+#container-second-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FCF0D9;
+}
+
+#container-second-art-text{
+    height: 100%;
+    width: 45%;
+    margin-left: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#second-art-heading{
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.second-art-paragraph{
+    width: 80%;
+    margin: 2% 0;
+}
+.second-art-paragraph:nth-child(1){
+    margin: 0 0 2% 0;
+}
+
+#second-art-btn{
+    height: 6rem;
+    width: 24rem;
+    margin-top: 5%;
+    font-family: "Mont Bold";
+    font-size: 2.25rem;
+    background-color: #FA7268;
+    color: #000;
+    border: 0;
+    /* border radius que encontré de https://www.uala.com.ar/ que respete la idea de evitar cuadrados*/
+    border-radius: 9999px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* La experiencia de usuario de saber que clickea es importante, por eso unas pseudo clases para mejorar la UX */
+#second-art-btn:hover{
+    background-color: #fc574c; 
+    transition: all 350ms ease-out;
+    box-shadow: 0 0 10px #FA7268;
+    color: #fdf2f2;
+}
+/* El aumento de color y de box-shadow sirve para hacer lo anterior y mejorar cada etapa de la experiencia, hover, y click */
+#second-art-btn:active{
+    background-color: #fc3f31; 
+    box-shadow: 0 0 13px #fc574c;
+    color: #FFF;
+}
+
+#second-art-img{
+    height: 100%;
+    width: 40%;
+}
+
+
+/* Estilizado del tercer artículo */
+
+#container-third-article{
+    height: 135vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9DEC9;
+}
+
+.third-art-heading{
+    font-size: 3.8rem;
+    letter-spacing: 0rem;
+}
+
+.third-art-paragraph{
+    width: 50%;
+    font-family: "Mont Bold";
+    font-size: 2rem;
+    text-align: center;
+}
+
+#container-third-art-info{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.third-art-sect-info{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#third-art-frame{
+    height: 70%;
+    width: 90%;
+    margin: auto;
+    border: 0;
+    border-radius: 5% 5%;
+}
+
+.third-art-sect-heading{
+    font-size: 3rem;
+    letter-spacing: 0rem;
+}
+
+.third-art-sect-paragraph{
+    width: 75%;
+    margin: 1% 0;
+    font-size: 2rem;
+}
+
+.third-art-sect-anchor{
+    font-family: "Mont Heavy";
+    color: #bb004b;
+}
+.third-art-sect-anchor:visited{
+    color: #bb004b;
+}
+.third-art-sect-anchor:hover{
+    color: #fc3f31;
+    transition: all 250ms ease-out;
+}
+
+/* Estilizado del footer */
+
+#container-footer{
+    height: 55vh;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 20%;
+    z-index: 3;
+    border-top-right-radius: 5% 10%;
+    background-color: #FA7268;
+    overflow: hidden;
+}
+
+#container-footer-img{
+    height: 100%;
+    width: 35%;
+    padding-left: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#footer-img{
+    height: auto;
+    width: 80%;
+    cursor: pointer;
+}
+
+#footer-span-copyright{
+    margin-top: 1.5rem;
+    width: 50%;
+    color: #FFF;
+    font-family: "Mont Regular";
+    font-size: 1.55rem;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#container-footer-info{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-text{
+    color: #fff;
+    margin: 1% 0;
+    font-family: "Futura Std Medium";
+    font-size: 2rem;
+}
+.footer-text:nth-child(3){
+    margin-top: 10%;
+}
+
+.footer-anchor{
+    font-family: "Mont Bold";
+    color: #272727;
+}
+.footer-anchor:hover{
+    color: #bb004b;
+    transition: all 250ms ease-out;
+}
+
+
+#container-footer-media{
+    height: 10%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.footer-media{
+    cursor: pointer;
+}
+
+#container-footer-text{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-heading{
+    color: rgb(252, 170, 164);
+    font-size: 2.5rem;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#footer-loris-img{
+    height: 40%;
+    width: 70%;
+    filter: opacity(.4);
+}
+
+/* Estilizado del div detrás del footer */
+
+#behind-footer{
+    height: 60vh;
+    width: 45%;
+    position: relative;
+    left: 55%;
+    bottom: 10%;
+    z-index: 1;
+    border-top-left-radius: 10% 10%;
+    background-color: #8C4A72;
+}
+
+#behind-footer-2{
+    height: 20vh;
+    width: 50%;
+    position: relative;
+    bottom: 25%;
+    left: 50%;
+    background-color: #BB004B;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+    .heading{
+        font-size: 4.8rem;
+        line-height: 5rem;
+    }
+
+    .paragraph{
+        width: 100%;
+        font-size: 2.15rem;
+    }
+
+    #container-second-art-text{
+        width: 40%;
+    }
+
+    .second-art-paragraph{
+        font-size: 1.95rem;
+    }
+
+    #second-art-img {
+        width: 45%;
+    }
+
+    .third-art-sect-heading{
+        font-size: 4rem;
+    }
+
+    .third-art-paragraph{
+        width: 50%;
+    }
+
+    .third-art-sect-paragraph{
+        width: 70%;
+        margin: 2% 0;
+        font-size: 2rem;
+    }
+    .third-art-sect-paragraph:nth-child(odd){
+        margin-bottom: 5%;
+    }
+    .footer-heading{
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .heading {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 824px){
+    #main-img{
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    #container-main-text{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .heading {
+        font-size: 3.8rem;
+        line-height: 4rem;
+    }
+
+    #first-art-img {
+        width: 55%;
+    }
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px){
+    #container-nav{
+        display: none;
+    }
+    
+    #container-main{
+        height: 120vh;
+        flex-direction: column;
+    }
+
+    #container-main-text {
+        height: 50%;
+        width: 100%;
+    }
+
+    #container-main-text > .main-text + .main-text{
+        width: 75%;
+        font-size: 2.1rem;
+    }
+
+    #main-img{
+        height: 50%;
+        width: auto;
+    }
+
+    .article{
+        height: 120vh;
+    }
+
+    .heading{
+        text-align: center;
+    }
+
+    .paragraph{
+        text-align: center;
+    }
+
+    #transition-main{
+        padding-top: 10%;
+    }
+
+    #container-article{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #container-first-art-text{
+        height: 30%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    #first-art-heading{
+        width: 100%;
+    }
+    
+    #first-art-span{
+        margin: 1% 0 5% 0;
+        font-family: "Mont SemiBold";
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    #first-art-img {
+        display: none;
+    }
+    
+    #first-art-img-mobile{
+        height: 50%;
+        width: 90%;
+        display: block;
+    }
+
+    #container-second-article{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #container-second-art-text{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    #second-art-heading {
+        width: 100%;
+        margin-bottom: 2.5%;
+    }
+
+    .second-art-paragraph{
+        width: 75%;
+        margin: 1% 0;
+    }
+
+    #second-art-btn{
+        margin-top: 2%  ;
+    }
+
+    #second-art-img{
+        height: 50%;
+        width: 100%;
+    }
+
+    #transition-article{
+        padding-top: 10%;
+        background: #FCF0D9;
+    }
+
+    #container-third-art-info{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .third-art-paragraph {
+        width: 90%;
+        font-size: 1.9rem;
+        margin: 0;
+    }
+
+    .third-art-sect-paragraph{
+        margin: 0.5% 0;
+    }
+    .third-art-sect-paragraph:nth-child(odd) {
+        margin-bottom: 0;
+    }
+
+    #third-art-sect-heading{
+        font-size: 3.5rem;
+        margin: 0;
+    }
+
+    .third-art-sect-info{
+        height: 50%;
+        width: 100%;
+        align-items: center;
+    }
+
+    #third-art-frame{
+        height: 100%;
+        width: 80%;
+    }
+
+    #wave-mobile{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    #container-footer{
+        width: 100%;
+        position: relative;
+        right: 0;
+        border-radius: 0;
+    }
+
+    #behind-footer{
+        display: none;
+    }
+    #behind-footer-2{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #container-main-text{
+        margin-top: 15%;
+    }
+    
+    #container-main-text > .main-text + .main-text{
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    .heading{
+        font-size: 3.6rem;
+    }
+
+    .paragraph{
+        font-size: 2.1rem;
+    }
+
+    #container-first-art-text{
+        align-items: center;
+    }
+
+    .article-text{
+        width: 90%;
+    }
+
+    .second-art-paragraph{
+        font-size: 1.9rem;
+    }
+
+    #second-art-btn {
+        height: 6rem;
+        width: 30rem;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+    #main-img{
+        max-width: 85%;
+    }
+
+    .heading {
+        font-size: 3.4rem;
+    }    
+
+    .paragraph{
+        font-size: 2rem;
+    }
+
+    .third-art-sect-paragraph {
+        width: 90%;
+    }
+
+    .third-art-sect-heading:nth-child(even){
+        margin-top: 5%;
+    }
+
+    #footer-img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #footer-span-copyright{
+        font-size: 1.2rem
+    }
+
+    .footer-text{
+        font-size: 1.8rem;
+    }
+
+    .footer-heading{
+        font-size: 2rem;
+    }
+}
