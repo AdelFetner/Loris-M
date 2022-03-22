@@ -75,6 +75,8 @@ a:visited{
 }
 
 img{
+    max-height: 100%;
+    max-width: 100%;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -164,6 +166,7 @@ img{
 #main-img{
     height: 65%;
     width: auto;
+    max-width: 90%;
     padding-left: 5%;
 }
 
@@ -801,10 +804,6 @@ img{
 }
 
 @media screen and (max-width: 375px){
-    #main-img{
-        max-width: 85%;
-    }
-
     .heading {
         font-size: 3.4rem;
     }    
