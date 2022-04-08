@@ -99,7 +99,7 @@ img{
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
     transition: top .5s ease-in-out .15s;
-    z-index: 3;
+    z-index: 4;
 }
 
 #header-img{
@@ -347,6 +347,11 @@ img{
     text-align: center;
 }
 
+.third-art-text::selection{
+    background-color: #BB004B;
+    color: #ffffff;
+}
+
 #container-third-art-info{
     height: 70%;
     width: 100%;
@@ -393,14 +398,17 @@ img{
     color: #fc3f31;
     transition: all 250ms ease-out;
 }
-
+.third-art-sect-anchor::selection{
+    background-color: #44ffb4;
+    color: #BB004B;
+}
 /* Estilizado del footer */
 
 #container-footer{
     height: 55vh;
     width: 80%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: absolute;
     right: 20%;
@@ -412,8 +420,7 @@ img{
 
 #container-footer-img{
     height: 100%;
-    width: 35%;
-    padding-left: 2.5%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,7 +446,7 @@ img{
 
 #container-footer-info{
     height: 100%;
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -752,10 +759,52 @@ img{
     }
 
     #container-footer{
+        height: 100vh;
         width: 100%;
-        position: relative;
+        flex-direction: column-reverse;
         right: 0;
         border-radius: 0;
+    }
+
+    #container-footer-img{
+        height: 30%;
+        align-items: center;
+    }
+
+    #footer-img{
+        width: 100%;
+    }
+
+    #footer-span-copyright{
+        width: 85%;
+        text-align: center;
+    }
+
+    #container-footer-info{
+        height: 35%;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .footer-text, .footer-text:nth-child(3){
+        margin: 1% 0;
+    }
+
+    #container-footer-media{
+        height: 20%;
+        margin: 0;
+    }
+
+    #container-footer-text{
+        height: 25%;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    #footer-loris-img{
+        height: 65%;
+        width: 100%;
     }
 
     #behind-footer{
@@ -804,12 +853,16 @@ img{
 }
 
 @media screen and (max-width: 375px){
+    .article{
+        height: 135vh;
+    }
+
     .heading {
         font-size: 3.4rem;
     }    
 
     .paragraph{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .third-art-sect-paragraph {
