@@ -1,14 +1,19 @@
 // Función para que el header se esconda/aparezca
 
 let scrollPrevio = window.scrollY;
-window.onscroll = function () {
+
+window.onscroll = () => {
+
+    let header = document.getElementById("container-header");
     let scrollActual = window.scrollY;
+
     if (scrollPrevio > scrollActual) {
-        document.getElementById("container-header").style.top = "0";
+        header.style.top = "0";
     } else {
-        document.getElementById("container-header").style.top = "-20%"
+        header.style.top = "-20%"
     }
     scrollPrevio = scrollActual;
+
 }
 
 // Redirecciones
