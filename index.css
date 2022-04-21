@@ -60,6 +60,7 @@ html,body{
     width: 100%;
     /* 1 rem = 10px */
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -142,6 +143,10 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#main-heading{
+    transition: left .5s ease-in-out .15s;
 }
 
 .main-text{
@@ -459,6 +464,10 @@ img{
     font-family: "Futura Std Medium";
     font-size: 2rem;
 }
+.footer-text::selection{
+    color: #fff;
+    background-color: #c0547f;
+}
 .footer-text:nth-child(3){
     margin-top: 10%;
 }
@@ -466,6 +475,10 @@ img{
 .footer-anchor{
     font-family: "Mont Bold";
     color: #272727;
+}
+.footer-anchor::selection{
+    color: #000;
+    background-color: #BB004B;
 }
 .footer-anchor:hover{
     color: #bb004b;
@@ -768,11 +781,12 @@ img{
 
     #container-footer-img{
         height: 30%;
+        width: 100%;
         align-items: center;
     }
 
     #footer-img{
-        width: 100%;
+        width: 40%;
     }
 
     #footer-span-copyright{
@@ -850,6 +864,10 @@ img{
         width: 30rem;
     }
 
+    #footer-img{
+        width: 50%;
+    }
+
 }
 
 @media screen and (max-width: 375px){
@@ -874,7 +892,7 @@ img{
     }
 
     #footer-img{
-        width: 100%;
+        width: 60%;
         max-width: 100%;
     }
 
@@ -888,5 +906,11 @@ img{
 
     .footer-heading{
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #footer-img {
+        width: 70%;
     }
 }
