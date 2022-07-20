@@ -1,21 +1,5 @@
-// window.onload = () =>{
-//     const header = document.getElementById("container-header")
-//     const main = document.getElementById("container-main")
-//     const box = main.getBoundingClientRect();
-//     if(box.top < window.innerHeight && box.bottom >= 0){
-//         header.style.display = "none"
-//     }else{
-//         header.style.display = "flex"
-//     }
-// }
+// Función para que el header se esconda/aparezca
 
-// window.onscroll{
-//     if(box.top < window.innerHeight && box.bottom >= 0){
-//         header.style.display = "flex"
-//     }else{
-//         header.style.display = "none"
-//     }
-// }
 
 let scrollPrevio = window.scrollY;
 
@@ -30,62 +14,32 @@ window.addEventListener("scroll", () =>{
     scrollPrevio = scrollActual;
 })
 
-const logoHeader = document.getElementById("header-img");
+// Redirecciones
 
-logoHeader.onclick = () => open("#", "_self")
+const imageHeader = document.getElementById("header-img");
+
+const imageFooter = document.getElementById("footer-img");
 
 
-// función para el typewriter effect
-// referir a https://safi.me.uk/typewriterjs/ para la documentación con los parametros disponibles
+imageHeader.onclick = () => {
+    open("#", "_self")
+};
 
-let mainType = document.getElementById('main-type');
+imageFooter.onclick = () => {
+    open("#", "_self")
+};
 
-let typewriter = new Typewriter(mainType, {
-    loop: true,
-    cursor: "",
-    delay: 75,
-});
 
-typewriter.typeString('lenguajes')
-    .pauseFor(500)
-    .deleteAll()
-    .typeString('manos')
-    .pauseFor(450)
-    .deleteAll()
-    .typeString('pensamientos')
-    .pauseFor(450)
-    .deleteAll()
-    .typeString('formas de pensar')
-    .pauseFor(450)
-    .deleteChars(6)
-    .typeString('jugar')
-    .pauseFor(450)
-    .deleteChars(5)
-    .typeString('hablar')
-    .pauseFor(450)
-    .deleteChars(6)
-    .typeString('amar')
-    .pauseFor(450)
-    .deleteAll()
-    .typeString('alegrías')
-    .pauseFor(450)
-    .deleteAll()
-    .typeString('siempre!')
-    .pauseFor(1250)
-    .deleteAll()
-    .start();
+// redirecciones de íconos footer-media
 
-// Redirecciones de iconos - footer
+const facebookRedirect = document.getElementById("footer-facebook");
 
-const iconFacebook = document.getElementById("icon-facebook")
-const iconInstagram = document.getElementById("icon-instagram")
-const iconGoogleMaps = document.getElementById("icon-gmaps")
-const footerLogo = document.getElementById("footer-img")
+const instagramRedirect = document.getElementById("footer-instagram");
 
-iconFacebook.addEventListener("click", () => open("https://www.facebook.com/LorisMDulceC", ""))
+const gMapsRedirect = document.getElementById("footer-gmaps");
 
-iconInstagram.addEventListener("click", () => open("https://www.instagram.com/lorismdulcec/", ""))
+facebookRedirect.addEventListener("click", () => open("https://www.facebook.com/LorisMDulceC", ""))
 
-iconGoogleMaps.addEventListener("click", () => open("https://g.page/LorisMDulceC?share", ""))
+instagramRedirect.addEventListener("click", () => open("https://www.instagram.com/lorismdulcec/", ""))
 
-footerLogo.addEventListener("click", () => open("#", "_self"))
+gMapsRedirect.addEventListener("click", () => open("https://g.page/jardinInfantes?share", ""))
