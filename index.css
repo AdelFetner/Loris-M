@@ -83,6 +83,11 @@ img{
     user-select: none;
 }
 
+textarea{
+    resize: vertical;
+    min-height: 200px;
+}
+
 
 /* Estilizado específico */
 
@@ -206,7 +211,7 @@ img{
 }
 
 /* Segunda transition, de segundo a tercer artículo */
-#transition-article{
+.transition-article{
     height: auto;
     width: 100%;
 }
@@ -407,6 +412,153 @@ img{
     background-color: #44ffb4;
     color: #BB004B;
 }
+
+/* Estilizado del container - form  */
+
+#container-form{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9DEC9;
+}
+
+#form-card{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    overflow: hidden;
+}
+
+#container-img{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+#form-iframe{
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+#container-form-text{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 4rem;
+}
+
+#contact-form{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: .8rem;
+}
+
+.form-heading{
+    font-size: 4.6rem;
+}
+
+.form-input{
+    height: 4.8rem;
+    min-height: 4.8rem;
+    width: 75%;
+    min-width: 32rem;
+    max-width: 52rem;
+    padding: 0 2.5rem;
+    border-radius: .4rem;
+    border: 0;
+    transition: all 75ms ease-out 50ms;
+}
+.form-input:hover{
+    outline: 3px solid #FA7268;
+}
+.form-input:focus{
+    outline: 3px solid #fc3f31;
+}
+
+#form-message{
+    min-height: 15rem;
+    height: 15rem;
+    max-height: 18rem;
+    padding: 1.8rem 2.5rem;
+}
+
+.form-btn{
+    min-height: 4.8rem;
+    height: 4.8rem;
+    width: 28rem;
+    font-size: 2.25rem;
+    font-family: "Mont Bold";
+    background-color: #FA7268;
+    color: #000;
+    border-radius: .4rem;
+    border: 0;
+    transition: all 350ms ease-out;
+}
+.form-btn:hover{
+    background-color: #fc574c; 
+    box-shadow: 0 0 10px #FA7268;
+    color: #fdf2f2;
+}
+.form-btn:active{
+    background-color: #fc3f31; 
+    box-shadow: 0 0 13px #fc574c;
+    color: #FFF;
+}
+
+.good-try{
+    background-color: #fff;
+}
+
+.form-span-error{
+    margin: -3.5rem 0 -2.5rem 0;
+    font-size: 1.4rem;
+}
+
+.bad-try{
+    border-color: #ff0000;
+    background-color: #fc9292;
+}
+.bad-try::placeholder{
+    color: #000;
+}
+
+/* Estilizado del modal de envío exitoso */
+
+/* #modal{
+    height: 15vh;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+} */
+
 /* Estilizado del footer */
 
 #container-footer{
@@ -586,6 +738,22 @@ img{
     .third-art-sect-paragraph:nth-child(odd){
         margin-bottom: 5%;
     }
+
+    #form-card {
+        height: 85%;
+        width: 95%;
+    }
+
+    #container-form-text{
+        width: 55%;
+        padding-left: 2rem;
+    }
+
+    .form-span-error {
+        text-align: center;
+        margin: -2rem 0 -.5rem 0;
+    }
+
     .footer-heading{
         font-size: 2.3rem;
     }
@@ -616,6 +784,31 @@ img{
 
     #first-art-img {
         width: 55%;
+    }
+
+    #container-form{
+        height: 175vh;
+    }
+    
+    #form-card{
+        flex-direction: column;
+    }
+
+    #container-img{
+        height: 40%;
+        width: 100%;
+    }
+
+    #container-form-text {
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        padding-left: 0;
+        gap: 0;
+    }
+
+    #contact-form{
+        align-items: center;
     }
 }
 
@@ -726,7 +919,7 @@ img{
         width: 100%;
     }
 
-    #transition-article{
+    .transition-article{
         padding-top: 10%;
         background: #FCF0D9;
     }
@@ -891,6 +1084,10 @@ img{
         margin-top: 5%;
     }
 
+    .form-input{
+        min-width: 30rem;
+    }
+
     #footer-img{
         width: 60%;
         max-width: 100%;
@@ -910,6 +1107,10 @@ img{
 }
 
 @media screen and (max-width: 320px){
+    .form-input {
+        min-width: 28rem;
+    }
+
     #footer-img {
         width: 70%;
     }
